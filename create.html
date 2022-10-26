@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>INDEX</title>
+    <link rel="stylesheet" type="text/css" href="mojCSS.css"/>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="description" content="Svke klase i klasne benificije za Dungeons & Dragons 5th Edition.">
+    <meta name="keywords" content="dnd class 5e webapp d&d">
+    <meta name="author" content="Antonio Peršin">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+<header class="blackheadband fixed" style="top:0px;">
+    <div class="center">
+        <!-- SPACE MAYBE FOR SOME PAGE TITLE -->
+    </div>
+</header>
+
+<nav>
+    <ul id="navlvl1" class="fixed">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="classes.html">Classes</a></li>
+        <li><a href="races.html">Races</a></li>
+        <li><a href="create.html">Charactermancer</a></li>
+    </ul>
+</nav>
+
+<main>
+    <h1>CHARACTERMANCER</h1>
+    <iframe src="https://www.aidedd.org/atlas/index.php?map=R&l=1" class="fullfig"></iframe>
+
+    <form action="create.html" method="GET">
+        <label for="playername">Player name:</label>
+        <input type="text" name="playername" id="playername">
+
+        <label for="charactername">Player name:</label>
+        <input type="text" name="charactername" id="charactername">
+
+        <label for="playermail">Player contact e-mail:</label>
+        <input type="email" name="playermail" id="playermail">
+
+        <label for="class">Choose a class:</label>
+        <select name="class" id="class">
+            <option value="artificer" selected>Artificer</option>
+            <option value="barbarian">Barbarian</option>
+            <option value="bard">Bard</option>
+            <option value="cleric">Cleric</option>
+            <option value="druid">Druid</option>
+        </select>
+
+        <label for="race">Choose a race:</label>
+        <select name="race" id="race">
+            <option value="dragonborn" selected>Dragonborn</option>
+            <option value="dwarf">Dwarf</option>
+            <option value="elf">Elf</option>
+            <option value="gnome">Gnome</option>
+            <option value="half-elf">Half-elf</option>
+        </select>
+
+        <input type="submit" value="Create">
+    </form>
+</main>
+
+<footer class="blackheadband">
+    <div class="center">
+        <p class="footertext">
+            Copyright &copy; Antonio Peršin <a href="https://github.com/AntonioPersin/Napredne-Web-Tehnologije-Projekt">
+            <img src="images/github icon.png" alt="ikona za github poveznicu" class="icon"></a>
+        </p>
+    </div>
+</footer>
+
+</body>
+</html>
