@@ -1,38 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
 
-<head>
-    <title>INDEX</title>
-    <link rel="stylesheet" type="text/css" href="mojCSS.css"/>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta name="description" content="Svke klase i klasne benificije za Dungeons & Dragons 5th Edition.">
-    <meta name="keywords" content="dnd class 5e webapp d&d">
-    <meta name="author" content="Antonio Peršin">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
+include 'header_wildcard.php';
 
-<body>
-<header class="blackheadband fixed" style="top:0px;">
-    <div class="center">
-        <!-- SPACE MAYBE FOR SOME PAGE TITLE -->
-    </div>
-</header>
-
-<nav>
-    <ul id="navlvl1" class="fixed">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="classes.html">Classes</a></li>
-        <li><a href="races.html">Races</a></li>
-        <li><a href="create.html">Charactermancer</a></li>
-    </ul>
-</nav>
-
+echo"
 <main>
     <section>
         <h1>BARBARIAN</h1>
 
-        <figure class="fullfig">
-            <img src="images/barbarian table.jpg" alt="barbarian class table">
+        <figure class='fullfig'>
+            <img src='images/barbarian table.jpg' alt='barbarian class table'>
             <figcaption>
                 <p>Barbarian table</p>
                 <p>You must have a Strength score of 13 or higher in order to multiclass in or out of this class.</p>
@@ -69,8 +45,8 @@
             </ul>
         </article>
 
-        <figure class="fullfig">
-            <img src="images/barbarian subclass table.jpg" alt="barbarian subclass options">
+        <figure class='fullfig'>
+            <img src='images/barbarian subclass table.jpg' alt='barbarian subclass options'>
             <figcaption>
                 <p>Primal path</p>
                 <p>At 3rd level, you choose a path that shapes the nature of your rage. Your choice grants you features
@@ -78,18 +54,11 @@
             </figcaption>
         </figure>
         <p>Izvor: dnd5e.wikidot.com, 25.10.2022.</p>
-        <a href="classes.html" class="almostbutton" style="display: block;text-align: center;">Back to classes</a>
+        <a href='classes.php' class='almostbutton' style='display: block;text-align: center;'>Back to classes</a>
     </section>
 </main>
+";
 
-<footer class="blackheadband">
-    <div class="center">
-        <p class="footertext">
-            Copyright &copy; Antonio Peršin <a href="https://github.com/AntonioPersin/Napredne-Web-Tehnologije-Projekt">
-            <img src="images/github icon.png" alt="ikona za github poveznicu" class="icon"></a>
-        </p>
-    </div>
-</footer>
+include 'footer_wildcard.php';
 
-</body>
-</html>
+?>

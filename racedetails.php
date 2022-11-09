@@ -1,32 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
 
-<head>
-    <title>INDEX</title>
-    <link rel="stylesheet" type="text/css" href="mojCSS.css"/>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta name="description" content="Svke klase i klasne benificije za Dungeons & Dragons 5th Edition.">
-    <meta name="keywords" content="dnd class 5e webapp d&d">
-    <meta name="author" content="Antonio Peršin">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
+include 'header_wildcard.php';
 
-<body>
-<header class="blackheadband fixed" style="top:0px;">
-    <div class="center">
-        <!-- SPACE MAYBE FOR SOME PAGE TITLE -->
-    </div>
-</header>
-
-<nav>
-    <ul id="navlvl1" class="fixed">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="classes.html">Classes</a></li>
-        <li><a href="races.html">Races</a></li>
-        <li><a href="create.html">Charactermancer</a></li>
-    </ul>
-</nav>
-
+echo"
 <main>
     <section>
         <h1>DRAGONBORN</h1>
@@ -50,7 +26,7 @@
             as if it were dim light. You can't discern color in darkness, only shades of gray.</p>
             <p><b>Fey Ancestry:</b> You have advantage on saving throws against being charmed, and magic can't put you to sleep.</p>
             <p><b>Trance:</b> Elves do not sleep. Instead they meditate deeply, remaining semi-conscious, for 4 hours a day.
-            The Common word for this meditation is "trance." While meditating, you dream after a fashion; such dreams are actually
+            The Common word for this meditation is 'trance.' While meditating, you dream after a fashion; such dreams are actually
             mental exercises that have become reflexive after years of practice. After resting in this way, you gain the same
             benefit a human would from 8 hours of sleep.</p>
             <p><b>Keen Senses:</b> You have proficiency in the Perception skill.</p>
@@ -58,18 +34,11 @@
         </article>
 
         <p>Izvor: dnd5e.wikidot.com, 25.10.2022.</p>
-        <a href="races.html" class="almostbutton" style="display: block;text-align: center;">Back to classes</a>
+        <a href='races.php' class='almostbutton' style='display: block;text-align: center;'>Back to classes</a>
     </section>
 </main>
+";
 
-<footer class="blackheadband">
-    <div class="center">
-        <p class="footertext">
-            Copyright &copy; Antonio Peršin <a href="https://github.com/AntonioPersin/Napredne-Web-Tehnologije-Projekt">
-            <img src="images/github icon.png" alt="ikona za github poveznicu" class="icon"></a>
-        </p>
-    </div>
-</footer>
+include 'footer_wildcard.php';
 
-</body>
-</html>
+?>

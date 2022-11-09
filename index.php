@@ -1,37 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
 
-<head>
-    <title>INDEX</title>
-    <link rel="stylesheet" type="text/css" href="mojCSS.css"/>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta name="description" content="Svke klase i klasne benificije za Dungeons & Dragons 5th Edition.">
-    <meta name="keywords" content="dnd class 5e webapp d&d">
-    <meta name="author" content="Antonio Peršin">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
+include 'header_wildcard.php';
 
-<body>
-<header class="blackheadband fixed" style="top:0px;">
-    <div class="center">
-        <!-- SPACE MAYBE FOR SOME PAGE TITLE -->
-    </div>
-</header>
-
-<nav>
-    <ul id="navlvl1" class="fixed">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="classes.html">Classes</a></li>
-        <li><a href="races.html">Races</a></li>
-        <li><a href="create.html">Charactermancer</a></li>
-    </ul>
-</nav>
-
+echo"
 <main>
     <section>
         <h1>WELCOME TO THE FORGOTTEN REALMS</h1>
         <figure>
-            <img src="images/faerun map.jpg" alt="map of Faerun, the canon D&D setting">
+            <img src='images/faerun map.jpg' alt='map of Faerun, the canon D&D setting'>
             <figcaption>Map of faerun, the canon Dungeons & Dragons setting</figcaption>
         </figure>
         <article>
@@ -45,11 +21,11 @@
             the rules-light system of Dungeons & Dragons and the more complex, rules-heavy system of Advanced Dungeons & Dragons (AD&D).
             The standard game was eventually expanded into a series of five box sets by the mid-1980s before being compiled and slightly
             revised in 1991 as the Dungeons & Dragons Rules Cyclopedia. Meanwhile, the 2nd edition of AD&D was published in 1989.
-            In 2000 the two branch split was ended when a new version was designated the 3rd edition, but dropped the "Advanced" prefix
+            In 2000 the two branch split was ended when a new version was designated the 3rd edition, but dropped the \"Advanced\" prefix
             to be called simply Dungeons & Dragons. The 4th edition was published in 2008. The 5th edition was released in 2014.</p>
 
             <video controls>
-                <source src="videos/Every_Pykes_wet_dream.webm">
+                <source src='videos/Every_Pykes_wet_dream.webm'>
             </video>
             
             <h2>First edition</h2>
@@ -59,8 +35,8 @@
             $2000 to print a thousand copies, the result has been described as amateurish.</p>
 
             <p>Only $100 was budgeted for artwork, and TSR co-founder Gary Gygax pressed into service anyone who was willing to help,
-            including local artist Cookie Corey; Greg Bell, a member of Jeff Perren's gaming group; D&D co-creator Dave Arneson;
-            Gygax's wife's half-sister Keenan Powell; and fellow TSR co-founder Don Kaye. Each artist was paid $2
+            including local artist Cookie Corey; Greg Bell, a member of Jeff Perren\'s gaming group; D&D co-creator Dave Arneson;
+            Gygax\'s wife\'s half-sister Keenan Powell; and fellow TSR co-founder Don Kaye. Each artist was paid $2
             for a small piece or $3 for a larger piece, with an identical amount paid as a royalty every time another thousand
             copies were printed.</p>
 
@@ -69,7 +45,7 @@
             of the game. In addition, the rules presume ownership of Outdoor Survival, a board game by then-unaffiliated company Avalon
             Hill for outdoor exploration and adventure. D&D was a radically new gaming concept at the time, and it was difficult for
             players without prior tabletop wargaming experience to grasp the vague rules. The release of the Greyhawk supplement removed
-            the game's dependency on the Chainmail rules, and made it much easier for new, non-wargaming players to grasp the concepts
+            the game\'s dependency on the Chainmail rules, and made it much easier for new, non-wargaming players to grasp the concepts
             of play. It also inadvertently aided the growth of competing game publishers, since just about anyone who grasped the concepts
             behind the game could write smoother and easier-to-use rules systems and sell them to the growing D&D fanbase (Tunnels &
             Trolls being the first such).</p>
@@ -81,15 +57,8 @@
         </article>
     </section>
 </main>
+";
 
-<footer class="blackheadband">
-    <div class="center">
-        <p class="footertext">
-            Copyright &copy; Antonio Peršin <a href="https://github.com/AntonioPersin/Napredne-Web-Tehnologije-Projekt">
-            <img src="images/github icon.png" alt="ikona za github poveznicu" class="icon"></a>
-        </p>
-    </div>
-</footer>
+include 'footer_wildcard.php';
 
-</body>
-</html>
+?>
