@@ -46,6 +46,9 @@ form *{
     padding: 5px;
     margin: 10px 0;
 }
+.smallInputWrapper label{
+    display:inline;
+}
 
 
 
@@ -57,6 +60,7 @@ form *{
     width:70%;
     margin:0 auto;
     padding:30px;
+    position: relative;
 }
 .fixed{
     position:fixed;
@@ -113,14 +117,6 @@ form *{
 }
 
 
-.ph{
-    font-size:70px;
-    font-weight: bold;
-    color: red;
-    background-color: darkorange;
-}
-
-
 @media(max-width:740px){
     header{
         height: 120px;
@@ -142,10 +138,17 @@ form *{
         width:90%;
         margin:0 auto;
     }
-    form *{
+    form>*{
         width: 100%;
     }
 
+    .smallInput{
+        display:block;
+        width:25%;
+        float:left;
+        margin:12px 1%;
+        padding:5px;
+    }
     .fullfig{
         width:100%;
         margin:0 auto;
@@ -185,10 +188,19 @@ form *{
     figure, video{
         width:50%;
     }
-    form *{
+    form>*{
         width: 60%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
+    .smallInput{
+        display:block;
+        width:15%;
+        float:left;
+        margin:12px 0;
+        padding:5px;
+    }
     .fullfig{
         width:100%;
         margin:0 auto;
@@ -203,5 +215,9 @@ form *{
         float:right;
         padding: 0 20px;
         width: 72%;
+    }
+
+    #smallInputWrapper{
+        width: 80%;
     }
 }

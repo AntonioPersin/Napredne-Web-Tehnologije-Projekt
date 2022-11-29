@@ -7,8 +7,8 @@ echo"
     <section>
         <h1>WELCOME TO THE FORGOTTEN REALMS</h1>
         <figure>
-            <img src='images/faerun map.jpg' alt='map of Faerun, the canon D&D setting'>
-            <figcaption>Map of faerun, the canon Dungeons & Dragons setting</figcaption>
+            <img src='images/faerun map.jpg' alt='Map of Faerûn, mainland of the canon Dungeons & Dragons setting - the Forgotten Realms'>
+            <figcaption>Map of Faerûn, mainland of the canon Dungeons & Dragons setting - the Forgotten Realms</figcaption>
         </figure>
         <article>
             <h2>Editions of Dungeons & Dragons</h2>
