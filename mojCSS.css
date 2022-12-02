@@ -1,5 +1,5 @@
 body{
-    margin:0;
+    margin:0 0 0 0;
     background-color:rgb(238,238,238);
     font-size:20px;
 }
@@ -21,8 +21,10 @@ main {
     width: 70%;
     margin:310px auto 0;
     background-color:rgb(255,255,255);
-    padding:30px;
+    padding:20px;
     overflow: auto;
+    position: relative;
+    min-height: 100%;
 }
 figure{
     display:inline;
@@ -49,7 +51,30 @@ form *{
 .smallInputWrapper label{
     display:inline;
 }
-
+table{
+    border-collapse:collapse;
+    margin:25px 0;
+    font-family:sans-serif;
+    min-width:400px;
+    box-shadow:0 0 20px rgba(0,0,0,0.15);
+}
+thead tr{
+    background-color: darkorange;
+    color: #ffffff;
+    text-align: left;
+}
+th, td{
+    padding: 12px 15px;
+}
+tbody tr{
+    border-bottom: 1px solid #dddddd;
+}
+tbody tr:nth-of-type(even){
+    background-color: #f3f3f3;
+}
+tbody tr:last-of-type{
+    border-bottom: 2px solid darkorange;
+}
 
 
 .blackheadband{
@@ -79,10 +104,6 @@ form *{
 .listitem section h2{
     display:inline;
 }
-.sectiondate{
-    display: inline;
-    float: right;
-}
 .almostbutton{
     padding:10px;
     margin:5px;
@@ -99,6 +120,7 @@ form *{
 .footertext{
     color: white;
     text-align: center;
+    margin:0;
 }
 .cleaner{
     clear: both;
@@ -153,12 +175,6 @@ form *{
         width:100%;
         margin:0 auto;
     }
-    .listitem img{
-        width: 95%;
-        display:inline;
-        float:left;
-        margin:0 auto;
-    }
     .listitem section{
         display:inline;
         float:right;
@@ -205,16 +221,11 @@ form *{
         width:100%;
         margin:0 auto;
     }
-    .listitem img{
-        width: 20%;
-        display:inline;
-        float:left;
-    }
     .listitem section{
         display:inline;
         float:right;
         padding: 0 20px;
-        width: 72%;
+        width: 95%;
     }
 
     #smallInputWrapper{

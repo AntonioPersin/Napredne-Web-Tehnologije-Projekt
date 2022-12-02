@@ -50,4 +50,18 @@ if(isset($_SESSION['user'])){
     ";
 }
 
+echo "
+<script>
+    function formatiraj(text){
+        text=text.replace(/\*\*_/g,'<b>').replace(/_\*\*/g,'</b>').replace(/##/g,'').replace(/\*/g,'');
+        return text;
+    };
+    
+    function formatiraj_tekst(text){
+        text=text.replace(/\*\*_/g,'').replace(/_\*\*/g,'').replace(/##/g,'').replace(/\*/g,'');
+        return text;
+    };
+</script>
+";
+
 ?>

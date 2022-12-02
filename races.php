@@ -2,58 +2,98 @@
 
 include 'header_wildcard.php';
 
-echo "
+echo"
 <main>
-    <h1>D&D 5e CLASSES</h1>
-    <a href='racedetails.php' class='listitem'>
-        <img src='images/dragonborn headshot.jpg' alt='dragonborn'>
+    
+    <h1>D&D 5e RACES</h1>
+    <a href='#' class='listitem'>
         <section>
-            <h2>Dragonborn</h2>
-            <p class='sectiondate'>26.10.2022.</p>
-            <p>The dragonborn walk proudly through a world that greets them with fearful incomprehension.</p>
+            <h2 class='race_title'></h2>
+            <p class='race_desc'></p>
             <p class='almostbutton'>Read More</p>
         </section>
     </a>
-    <a href='racedetails.php' class='listitem'>
-        <img src='images/dwarf headshot.jpg' alt='dwarf'>
+    <a href='#' class='listitem'>
         <section>
-            <h2>Dwarf</h2>
-            <p class='sectiondate'>26.10.2022.</p>
-            <p>Kingdoms rich in ancient grandeur, halls carved into the roots of mountains, the echoing of
-            picks and hammers in deep mines and blazing forges, a commitment to clan and tradition, and
-            a burning hatred of goblins and orcs.</p>
+            <h2 class='race_title'></h2>
+            <p class='race_desc'></p>
             <p class='almostbutton'>Read More</p>
         </section>
     </a>
-    <a href='racedetails.php' class='listitem'>
-        <img src='images/elf headshot.jpg' alt='elf'>
+    <a href='#' class='listitem'>
         <section>
-            <h2>Elf</h2>
-            <p class='sectiondate'>26.10.2022.</p>
-            <p>Elves love nature and magic, art and artistry, music and poetry.</p>
+            <h2 class='race_title'></h2>
+            <p class='race_desc'></p>
             <p class='almostbutton'>Read More</p>
         </section>
     </a>
-    <a href='racedetails.php' class='listitem'>
-        <img src='images/gnome headshot.jpg' alt='gnome'>
+    <a href='#' class='listitem'>
         <section>
-            <h2>Gnome</h2>
-            <p class='sectiondate'>26.10.2022.</p>
-            <p>A constant hum of busy activity pervades the warrens and neighborhoods where gnomes form their close-knit communities.</p>
+            <h2 class='race_title'></h2>
+            <p class='race_desc'></p>
             <p class='almostbutton'>Read More</p>
         </section>
     </a>
-    <a href='racedetails.php' class='listitem'>
-        <img src='images/half-elf headshot.jpg' alt='half-elf'>
+    <a href='#' class='listitem'>
         <section>
-            <h2>Half-elf</h2>
-            <p class='sectiondate'>26.10.2022.</p>
-            <p>Human curiosity, inventiveness, and ambition tempered by the refined senses, love of nature, and artistic tastes of the elves.</p>
+            <h2 class='race_title'></h2>
+            <p class='race_desc'></p>
+            <p class='almostbutton'>Read More</p>
+        </section>
+    </a>
+    <a href='#' class='listitem'>
+        <section>
+            <h2 class='race_title'></h2>
+            <p class='race_desc'></p>
+            <p class='almostbutton'>Read More</p>
+        </section>
+    </a>
+    <a href='#' class='listitem'>
+        <section>
+            <h2 class='race_title'></h2>
+            <p class='race_desc'></p>
+            <p class='almostbutton'>Read More</p>
+        </section>
+    </a>
+    <a href='#' class='listitem'>
+        <section>
+            <h2 class='race_title'></h2>
+            <p class='race_desc'></p>
+            <p class='almostbutton'>Read More</p>
+        </section>
+    </a>
+    <a href='#' class='listitem'>
+        <section>
+            <h2 class='race_title'></h2>
+            <p class='race_desc'></p>
             <p class='almostbutton'>Read More</p>
         </section>
     </a>
     <div class='cleaner'></div>
 </main>
+<script>
+    window.addEventListener('load',ucitaj,false);
+    function ucitaj(){
+        console.log('function');
+        var url='https://api.open5e.com/races/';
+        var xhttp = new XMLHttpRequest();
+        
+        xhttp.onreadystatechange = function () {
+            if (this.readyState == 4) {
+                var reza = JSON.parse(this.responseText);
+                reza.results.forEach((elem,index)=>{
+                    document.getElementsByClassName('listitem')[index].href='racedetails.php?name='+reza.results[index].slug;
+                    document.getElementsByClassName('race_title')[index].innerHTML=formatiraj(reza.results[index].name);
+                    document.getElementsByClassName('race_desc')[index].innerHTML=formatiraj(reza.results[index].desc);
+                });
+            }
+        };
+        
+        xhttp.open('GET', url, async = true);
+        xhttp.setRequestHeader('Content-type', 'application/json; charset=UTF-8');
+        xhttp.send();
+    };
+</script>
 ";
 
 include 'footer_wildcard.php';
