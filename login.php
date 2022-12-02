@@ -34,6 +34,8 @@ if(isset($_POST['attempted'])){
     }
 }
 
+mysqli_close($dbconn);
+
 echo "
         <input type='submit' value='Login' name='attempted'>
     </form>

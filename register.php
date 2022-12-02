@@ -30,7 +30,7 @@ if(isset($_POST['submitted'])){
         $query = "INSERT INTO users (playerName, email, password) VALUES ('".$_POST['playername']."', '".$_POST['email']."', '".$pass_enc."')";
         $res = @mysqli_query($dbconn, $query);
         echo "<p>Registration successful please wait.</p>";
-        header("Refresh: 3;URL=login.php");
+        header("Refresh: 2;URL=login.php");
     }elseif ($_POST['pass1']!=$_POST['pass2']){
         echo "<p>Passwords must match.</p>";
     }else{

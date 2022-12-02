@@ -1,39 +1,77 @@
 <?php
 
 include 'header_wildcard.php';
+include 'functions.php';
 
-echo"
+if(isset($_GET['name'])){
+    $id=$_GET['name'];
+}
+
+echo "
+<script>
+    
+    window.addEventListener('load',ucitaj,false);
+    function ucitaj(){
+        var url='https://api.open5e.com/races/".$id."';
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+            if (this.readyState == 4) {
+                var reza = JSON.parse(this.responseText);
+                
+                document.getElementsByTagName('h1')[0].innerText=reza.name;
+                document.getElementById('race_desc').innerHTML=formatiraj(reza.desc);
+                document.getElementById('race_asi').innerHTML=formatiraj(reza.asi_desc);
+                document.getElementById('race_age').innerHTML=formatiraj(reza.age);
+                document.getElementById('race_align').innerHTML=formatiraj(reza.alignment);
+                document.getElementById('race_size').innerHTML=formatiraj(reza.size);
+                document.getElementById('race_speed').innerHTML=formatiraj(reza.speed_desc);
+                document.getElementById('race_langs').innerHTML=formatiraj(reza.languages);
+                document.getElementById('race_vision').innerHTML=formatiraj(reza.vision);
+                var traits=reza.traits.replace(/\*\*_/g,'').replace(/_\*\*/g,'').replace(/\*\*/g,'');
+                document.getElementById('race_traits').innerText=traits;
+                if(reza.subraces.length>0){
+                    var subraces_dl='';
+                    reza.subraces.forEach((elem,index)=>{
+                       subraces_dl+='<dt>'+elem.name+'</dt><dd>'+elem.desc+'</dd>';
+                    });
+                    document.getElementById('subraces').innerHTML=subraces_dl;
+                }else{
+                    document.getElementById('subraces').innerHTML='<dt>No available subraces for this race.</dt>';
+                }
+                
+                
+            }
+        };
+        
+        xhttp.open('GET', url, async = true);
+        xhttp.setRequestHeader('Content-type', 'application/json; charset=UTF-8');
+        xhttp.send();
+    };
+</script>
 <main>
     <section>
-        <h1>DRAGONBORN</h1>
+        <h1></h1>
 
         <article>
-            <p>Elves are a magical people of otherworldly grace, living in places of ethereal beauty, in the midst of
-            ancient forests or in silvery spires glittering with faerie light, where soft music drifts through the
-            air and gentle fragrances waft on the breeze. Elves love nature and magic, art and artistry, music and
-            poetry.</p>
+            <p id='race_desc'></p>
 
-            <h2>Race Features</h2>
+            <h2>Racial Features</h2>
 
-            <p><b>Ability Score Increase:</b> Your Dexterity score increases by 2.</p>
-            <p><b>Age:</b> Although elves reach physical maturity at about the same age as humans, the elven understanding
-            of adulthood goes beyond physical growth to encompass worldly experience. An elf typically claims adulthood and
-            an adult name around the age of 100 and can live to be 750 years old.</p>
-            <p><b>Size:</b> Elves range from under 5 to over 6 feet tall and have slender builds. Your size is Medium.</p>
-            <p><b>Speed:</b> Your base walking speed is 30 feet.</p>
-            <p><b>Darkvision:</b> Accustomed to twilit forests and the night sky, you have superior vision in dark
-            and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness
-            as if it were dim light. You can't discern color in darkness, only shades of gray.</p>
-            <p><b>Fey Ancestry:</b> You have advantage on saving throws against being charmed, and magic can't put you to sleep.</p>
-            <p><b>Trance:</b> Elves do not sleep. Instead they meditate deeply, remaining semi-conscious, for 4 hours a day.
-            The Common word for this meditation is 'trance.' While meditating, you dream after a fashion; such dreams are actually
-            mental exercises that have become reflexive after years of practice. After resting in this way, you gain the same
-            benefit a human would from 8 hours of sleep.</p>
-            <p><b>Keen Senses:</b> You have proficiency in the Perception skill.</p>
-            <p><b>Languages:</b> You can speak, read, and write Common and Elven.</p>
+            <p id='race_asi'></p>
+            <p id='race_age'></p>
+            <p id='race_align'></p>
+            <p id='race_size'></p>
+            <p id='race_speed'></p>
+            <p id='race_langs'></p>
+            <p id='race_vision'></p>
+            <p id='race_traits'></p>
+            
+            <h2>Subraces</h2>   
+            <dl id='subraces'>
+            </dl>
         </article>
 
-        <p>Izvor: dnd5e.wikidot.com, 25.10.2022.</p>
+        <p>Source: <a href='https://open5e.com'>open5e.com</a>, ".parseDate(date('Y-m-d'))."</p>
         <a href='races.php' class='almostbutton' style='display: block;text-align: center;'>Back to classes</a>
     </section>
 </main>

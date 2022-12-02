@@ -7,7 +7,7 @@ echo "
 <html lang='en'>
 
 <head>
-    <title>INDEX</title>
+    <title>D&D5e Helper</title>
     <link rel='stylesheet' type='text/css' href='mojCSS.css'/>
     <meta http-equiv='content-type' content='text/html; charset=UTF-8'>
     <meta name='description' content='Sve klase i klasne benificijete rase i rasne benificije za Dungeons & Dragons 5th Edition.'>
@@ -49,5 +49,19 @@ if(isset($_SESSION['user'])){
     </nav>
     ";
 }
+
+echo "
+<script>
+    function formatiraj(text){
+        text=text.replace(/\*\*_/g,'<b>').replace(/_\*\*/g,'</b>').replace(/##/g,'').replace(/\*/g,'');
+        return text;
+    };
+    
+    function formatiraj_tekst(text){
+        text=text.replace(/\*\*_/g,'').replace(/_\*\*/g,'').replace(/##/g,'').replace(/\*/g,'');
+        return text;
+    };
+</script>
+";
 
 ?>

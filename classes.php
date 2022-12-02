@@ -4,56 +4,143 @@ include 'header_wildcard.php';
 
 echo"
 <main>
+    
     <h1>D&D 5e CLASSES</h1>
-    <a href='classdetails.php' class='listitem'>
-        <img src='images/artificer logo.webp' alt='artificer'>
+    <a href='#' class='listitem'>
         <section>
-            <h2>Artificer</h2>
-            <p class='sectiondate'>24.10.2022.</p>
-            <p>Masters of invention, artificers use ingenuity and magic to unlock extraordinary capabilities in objects.</p>
+            <h2 class='class_title'></h2>
+            <p class='class_hit_die'></p>
+            <p class='class_hp_start'></p>
+            <p class='class_hp_level'></p>
             <p class='almostbutton'>Read More</p>
         </section>
     </a>
-    <a href='classdetails.php' class='listitem'>
-        <img src='images/barbarian logo.png' alt='barbarian'>
+    <a href='#' class='listitem'>
         <section>
-            <h2>Barbarian</h2>
-            <p class='sectiondate'>24.10.2022.</p>
-            <p>For some, their rage springs from a communion with fierce animal spirits.</p>
+            <h2 class='class_title'></h2>
+            <p class='class_hit_die'></p>
+            <p class='class_hp_start'></p>
+            <p class='class_hp_level'></p>
             <p class='almostbutton'>Read More</p>
         </section>
     </a>
-    <a href='classdetails.php' class='listitem'>
-        <img src='images/bard logo.png' alt='bard'>
+    <a href='#' class='listitem'>
         <section>
-            <h2>Bard</h2>
-            <p class='sectiondate'>24.10.2022.</p>
-            <p>Whether scholar, skald, or scoundrel, a bard weaves magic through words and music to inspire allies, demoralize
-            foes, manipulate minds, create illusions, and even heal wounds.</p>
+            <h2 class='class_title'></h2>
+            <p class='class_hit_die'></p>
+            <p class='class_hp_start'></p>
+            <p class='class_hp_level'></p>
             <p class='almostbutton'>Read More</p>
         </section>
     </a>
-    <a href='classdetails.php' class='listitem'>
-        <img src='images/cleric logo.png' alt='cleric'>
+    <a href='#' class='listitem'>
         <section>
-            <h2>Cleric</h2>
-            <p class='sectiondate'>24.10.2022.</p>
-            <p>Clerics are intermediaries between the mortal world and the distant planes of the gods.</p>
+            <h2 class='class_title'></h2>
+            <p class='class_hit_die'></p>
+            <p class='class_hp_start'></p>
+            <p class='class_hp_level'></p>
             <p class='almostbutton'>Read More</p>
         </section>
     </a>
-    <a href='classdetails.php' class='listitem'>
-        <img src='images/druid logo.png' alt='druid'>
+    <a href='#' class='listitem'>
         <section>
-            <h2>Druid</h2>
-            <p class='sectiondate'>24.10.2022.</p>
-            <p>Whether calling on the elemental forces of nature or emulating the creatures of the animal world,
-            druids are an embodiment of nature's resilience, cunning, and fury.</p>
-            <p class='almostbutton''>Read More</p>
+            <h2 class='class_title'></h2>
+            <p class='class_hit_die'></p>
+            <p class='class_hp_start'></p>
+            <p class='class_hp_level'></p>
+            <p class='almostbutton'>Read More</p>
+        </section>
+    </a>
+    <a href='#' class='listitem'>
+        <section>
+            <h2 class='class_title'></h2>
+            <p class='class_hit_die'></p>
+            <p class='class_hp_start'></p>
+            <p class='class_hp_level'></p>
+            <p class='almostbutton'>Read More</p>
+        </section>
+    </a>
+    <a href='#' class='listitem'>
+        <section>
+            <h2 class='class_title'></h2>
+            <p class='class_hit_die'></p>
+            <p class='class_hp_start'></p>
+            <p class='class_hp_level'></p>
+            <p class='almostbutton'>Read More</p>
+        </section>
+    </a>
+    <a href='#' class='listitem'>
+        <section>
+            <h2 class='class_title'></h2>
+            <p class='class_hit_die'></p>
+            <p class='class_hp_start'></p>
+            <p class='class_hp_level'></p>
+            <p class='almostbutton'>Read More</p>
+        </section>
+    </a>
+    <a href='#' class='listitem'>
+        <section>
+            <h2 class='class_title'></h2>
+            <p class='class_hit_die'></p>
+            <p class='class_hp_start'></p>
+            <p class='class_hp_level'></p>
+            <p class='almostbutton'>Read More</p>
+        </section>
+    </a>
+    <a href='#' class='listitem'>
+        <section>
+            <h2 class='class_title'></h2>
+            <p class='class_hit_die'></p>
+            <p class='class_hp_start'></p>
+            <p class='class_hp_level'></p>
+            <p class='almostbutton'>Read More</p>
+        </section>
+    </a>
+    <a href='#' class='listitem'>
+        <section>
+            <h2 class='class_title'></h2>
+            <p class='class_hit_die'></p>
+            <p class='class_hp_start'></p>
+            <p class='class_hp_level'></p>
+            <p class='almostbutton'>Read More</p>
+        </section>
+    </a>
+    <a href='#' class='listitem'>
+        <section>
+            <h2 class='class_title'></h2>
+            <p class='class_hit_die'></p>
+            <p class='class_hp_start'></p>
+            <p class='class_hp_level'></p>
+            <p class='almostbutton'>Read More</p>
         </section>
     </a>
     <div class='cleaner'></div>
 </main>
+<script>
+    window.addEventListener('load',ucitaj,false);
+    function ucitaj(){
+        console.log('function');
+        var url='https://api.open5e.com/classes/';
+        var xhttp = new XMLHttpRequest();
+        
+        xhttp.onreadystatechange = function () {
+            if (this.readyState == 4) {
+                var reza = JSON.parse(this.responseText);
+                reza.results.forEach((elem,index)=>{
+                    document.getElementsByClassName('listitem')[index].href='classdetails.php?name='+reza.results[index].slug;
+                    document.getElementsByClassName('class_title')[index].innerHTML=formatiraj(reza.results[index].name);
+                    document.getElementsByClassName('class_hit_die')[index].innerHTML='Hit die: '+formatiraj(reza.results[index].hit_dice);
+                    document.getElementsByClassName('class_hp_start')[index].innerHTML='HP at 1st level: '+formatiraj(reza.results[index].hp_at_1st_level);
+                    document.getElementsByClassName('class_hp_level')[index].innerHTML='HP at higher levels: '+formatiraj(reza.results[index].hp_at_higher_levels);
+                });
+            }
+        };
+        
+        xhttp.open('GET', url, async = true);
+        xhttp.setRequestHeader('Content-type', 'application/json; charset=UTF-8');
+        xhttp.send();
+    };
+</script>
 ";
 
 include 'footer_wildcard.php';
